@@ -46,6 +46,14 @@ config.keys = {
   { key = "=", mods = "CTRL", action = wezterm.action.IncreaseFontSize },
   { key = "-", mods = "CTRL", action = wezterm.action.DecreaseFontSize },
   { key = "0", mods = "CTRL", action = wezterm.action.ResetFontSize },
+  -- Abre lazygit em um painel flutuante (fecha sozinho ao sair)
+  {
+    key = "g",
+    mods = "CTRL|SHIFT",
+    action = wezterm.action.SpawnCommandInNewTab({
+      args = { "lazygit" },
+    }),
+  },
 }
 
 return config

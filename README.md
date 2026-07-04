@@ -44,6 +44,7 @@ That's it — no `:PackerSync`, no `:Lazy`, nothing extra.
 | `Space w` | Normal | Save file |
 | `Space q` | Normal | Close window |
 | `Space e` | Normal | File explorer (built-in) |
+| `Space g` | Normal | Open lazygit in a vertical terminal split |
 | `Ctrl+h/j/k/l` | Normal | Move between splits |
 | `Esc` | Normal | Clear search highlight |
 | `J` / `K` | Visual | Move selected lines down / up |
@@ -91,5 +92,37 @@ cp wezterm/wezterm.lua ~/.wezterm.lua
 | `Ctrl+Shift+W` | Close tab |
 | `Ctrl+Shift+C` | Copy |
 | `Ctrl+Shift+V` | Paste |
+| `Ctrl+Shift+G` | Open lazygit in a new tab |
 | `Ctrl+=` / `Ctrl+-` | Increase / decrease font size |
 | `Ctrl+0` | Reset font size |
+
+---
+
+## lazygit
+
+A terminal UI for Git — review commits, diffs, and branches before pushing.
+
+**Install**
+
+```bash
+brew install lazygit
+```
+
+**Usage**
+
+| Where | Key | Action |
+|-------|-----|--------|
+| WezTerm | `Ctrl+Shift+G` | Open lazygit in a new tab |
+| Neovim | `Space g` | Open lazygit in a vertical split |
+| Terminal | `lazygit` | Run directly |
+
+**Key bindings inside lazygit**
+
+| Key | Action |
+|-----|--------|
+| `d` | View diff of selected commit / file |
+| `P` | Push to remote |
+| `p` | Pull from remote |
+| `c` | Commit staged changes |
+| `space` | Stage / unstage file |
+| `q` | Quit |

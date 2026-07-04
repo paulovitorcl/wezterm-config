@@ -58,3 +58,6 @@ map("n", "<Esc>", ":nohlsearch<CR>", { silent = true })
 -- Move linha selecionada pra cima/baixo no modo visual
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
+
+-- Abre lazygit em um terminal vertical (fecha com q dentro do lazygit)
+map("n", "<leader>g", ":vert term lazygit<CR>", { desc = "lazygit" })
